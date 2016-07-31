@@ -12,9 +12,24 @@ avi = Teacher.new
 avi.first_name = "Avi"
 avi.last_name = "Flombaum"
 
+jim=User.new
+jim.first_name="Jim"
+jim.last_name="Morrison"
+
+mobin=Student.new
+mobin.first_name="Mobin"
+mobin.last_name="Salahari"
+# jim.learn 
+#he can't because he isn't a student, which is a damn shame. Knowledge should be available to everyone.
+#¯\_(ツ)_/¯
+
 
 some_knowledge = avi.teach 
-
+more_knowledge=avi.teach
+mobin_knowledge=avi.teach
 steve.learn(some_knowledge)
+steve.learn(more_knowledge)
+mobin.learn(mobin_knowledge)
 
-puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+puts "Steve knows #{steve.knowledge.join(" and ")}"
+puts "Mobin knows #{mobin.knowledge.join}"
